@@ -1184,11 +1184,13 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #navbar { padding: 1rem 1.5rem; }
-  #navbar.scrolled { padding: 0.75rem 1.5rem; }
-  .nav-links { display: none; }
-  .nav-cta { display: none; }
-  .burger { display: flex; }
+  /* Navbar */
+  #navbar           { padding: 0.875rem 1.25rem; }
+  #navbar.scrolled  { padding: 0.75rem 1.25rem; }
+  .nav-links        { display: none; }
+  .nav-cta          { display: none; }
+  .burger           { display: flex; }
+  .nav-logo-img     { height: 36px; }
 
   .nav-links.open {
     display: flex;
@@ -1209,16 +1211,64 @@ footer {
     text-transform: none;
   }
 
-  .container { padding: 0 1.5rem; }
-  .section { padding: 5rem 0; }
-  #propuesta { padding: 3rem 0; }
-  .props-grid { grid-template-columns: 1fr; }
-  .prop-item { border-right: none; border-bottom: 1px solid var(--border); padding: 2rem 1.5rem; }
+  /* Layout general */
+  .container  { padding: 0 1.25rem; }
+  .section    { padding: 3.5rem 0; }
+  #propuesta  { padding: 2.5rem 0; }
+
+  /* Hero */
+  #hero             { padding-top: 5rem; display: flex; flex-direction: column; }
+  .hero-content     { padding: 2.5rem 1.25rem 2rem; }
+  .hero-title       { font-size: clamp(2.25rem, 9vw, 3rem); }
+  .hero-sub         { font-size: 0.9rem; }
+  .hero-actions     { flex-direction: column; gap: 0.75rem; }
+  .hero-actions a   { width: 100%; justify-content: center; }
+  .hero-scroll-hint { display: none; }
+  .hero-stat-card   { display: none; }
+
+  /* Propuesta */
+  .props-grid   { grid-template-columns: 1fr; }
+  .prop-item    { border-right: none; border-bottom: 1px solid var(--border); padding: 1.5rem 1.25rem; }
   .prop-item:last-child { border-bottom: none; }
-  .patologias-cols { grid-template-columns: 1fr; }
-  .proceso-steps { grid-template-columns: 1fr; }
-  .contacto-grid { grid-template-columns: 1fr; }
-  .tecnicas-grid { grid-template-columns: 1fr; }
-  .hero-actions { flex-direction: column; }
-  .hero-actions a { justify-content: center; }
+
+  /* Servicios */
+  .servicio-card  { padding: 1.75rem 1.5rem; }
+  .servicio-num   { font-size: 2.5rem; top: 1rem; right: 1rem; }
+
+  /* Técnicas */
+  .tecnicas-grid        { grid-template-columns: 1fr; }
+  .tecnica-item         { border-right: 1px solid var(--border) !important; border-bottom: 1px solid var(--border) !important; padding: 1.25rem; }
+  .tecnica-item:last-child { border-bottom: none !important; }
+
+  /* Proceso */
+  .proceso-steps        { grid-template-columns: 1fr; gap: 1.5rem; }
+  .proceso-steps::before{ display: none; }
+  .paso                 { padding: 0 0.5rem; text-align: left; display: flex; align-items: flex-start; gap: 1.25rem; }
+  .paso-num             { margin: 0; flex-shrink: 0; width: 42px; height: 42px; font-size: 0.7rem; }
+  .paso-content         { padding-top: 0.5rem; }
+
+  /* Patologías */
+  .patologias-cols      { grid-template-columns: 1fr; }
+  .patologia-group      { padding: 1.5rem; }
+
+  /* Sobre mí */
+  .sobre-photo img      { height: 280px; object-position: top center; }
+  .sobre-tag-card       { position: relative; bottom: auto; right: auto; margin-top: 1rem; display: inline-flex; align-items: center; gap: 0.75rem; border-radius: 8px; }
+  .tag-card-num         { font-size: 1.5rem; }
+
+  /* Contacto */
+  .contacto-grid        { grid-template-columns: 1fr; }
+  .cinfo-card           { padding: 1rem 1.25rem; }
+
+  /* Footer */
+  .footer-inner         { grid-template-columns: 1fr; gap: 1.5rem; text-align: center; }
+  .footer-contact       { align-items: center; }
+  .footer-nav           { justify-content: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo-img      { height: 40px; }
+}
+
+@media (max-width: 480px) {
+  .hero-title   { font-size: clamp(2rem, 10vw, 2.5rem); }
+  .section-head h2 { font-size: 1.625rem; }
+  .btn-primary, .btn-ghost, .btn-whatsapp { padding: 0.875rem 1.5rem; font-size: 0.875rem; }
 }
